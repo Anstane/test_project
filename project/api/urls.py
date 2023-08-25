@@ -10,7 +10,7 @@ from .views import (
 app_name = 'api'
 
 router = routers.DefaultRouter()
-router.register(r'musicain', MusicianViewSet)
+router.register(r'musician', MusicianViewSet)
 router.register(r'album', AlbumViewSet)
 router.register(r'song', SongViewSet)
 
