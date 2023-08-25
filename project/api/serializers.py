@@ -5,13 +5,15 @@ from models.models import (
     Album,
     Song
 )
+
+
 class MusicianSerializer(serializers.ModelSerializer):
     """Сериализатор модели музыканта."""
 
     class Meta:
         model = Musician
         fields = ('name', 'id',)
-
+    
 
 class SongRepSerializer(serializers.ModelSerializer):
     """
