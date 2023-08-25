@@ -55,6 +55,6 @@ class SongAdmin(admin.ModelAdmin):
 
     def get_albums(self, obj):
         return '\n'.join([a.name for a in obj.album.all()])
-    
+
     def get_musicians(self, obj):
         return '\n'.join([m.name for m in obj.musician.all()])
