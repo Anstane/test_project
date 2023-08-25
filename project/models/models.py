@@ -21,8 +21,13 @@ class Album(models.Model):
     )
     musician = models.ForeignKey(
         Musician,
-        related_name='album',
+        related_name='album_musician',
         on_delete=models.CASCADE
+    )
+    song = models.ManyToManyField(
+        'Song',
+        related_name='album_song',
+        blank=True
     )
     year = models.PositiveIntegerField(
         validators=[
@@ -43,7 +48,12 @@ class Song(models.Model):
     )
     album = models.ManyToManyField(
         Album,
-        related_name='song'
+        related_name='song_album',
+        blank=True
+    )
+    musician = models.ManyToManyField(
+        Musician,
+        related_name='song_musician',
     )
 
     def __str__(self):
