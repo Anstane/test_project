@@ -5,8 +5,6 @@ from models.models import (
     Album,
     Song
 )
-
-
 class MusicianSerializer(serializers.ModelSerializer):
     """Сериализатор модели музыканта."""
 
